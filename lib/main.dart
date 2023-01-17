@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/pages/Padding.dart';
 import 'package:flutter_application_3/pages/page1.dart';
 import 'package:flutter_application_3/pages/page2.dart';
 import 'package:flutter_application_3/pages/page3%20.dart';
@@ -34,6 +35,7 @@ class _HomePageState extends State<HomePage> {
     mainmsi(),
     HomePage1(),
     page4(),
+    Paddingpage1(),
   ];
 
   @override
@@ -56,6 +58,10 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.bookmark),
             label: 'bookmark',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
