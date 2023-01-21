@@ -26,7 +26,7 @@ class _HomePage1State extends State<HomePage1> {
         ),
         title: Text(
           "Bookmark",
-          style: TextStyle(color: Colors.blue),
+          style: TextStyle(color: Colors.white),
         ),
       ),
       body: CustomScrollView(

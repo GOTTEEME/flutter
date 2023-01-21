@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_application_3/dev/homepage.dart';
 
 class mainmsi extends StatefulWidget {
   const mainmsi({Key? key}) : super(key: key);
@@ -16,7 +17,12 @@ class _mainmsiState extends State<mainmsi> {
         backgroundColor: Color.fromRGBO(18, 56, 86, 1),
         appBar: AppBar(
           elevation: 0.0,
-          backgroundColor: Color.fromRGBO(18, 56, 86, 1),
+          backgroundColor: Colors.transparent,
+          centerTitle: true,
+          title: Text(
+            "Player Statistic",
+            style: TextStyle(color: Colors.white),
+          ),
         ),
         body: CustomScrollView(
           slivers: [
@@ -26,88 +32,83 @@ class _mainmsiState extends State<mainmsi> {
                 child: Container(
                   child: Column(
                     children: [
-                      //head
-                      Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Container(
-                          height: 50,
-                          child: Align(
-                            alignment: Alignment.topCenter,
-                            child: Text(
-                              "Player Statistic",
-                              style: TextStyle(
-                                  fontSize: 20,
-                                  fontFamily: 'Roboto',
-                                  color: Colors.white),
-                            ),
-                          ),
-                        ),
-                      ),
-                      //content1
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Container(
+                      TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomePage3()));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
                           child: Container(
-                            height: 160,
-                            width: 340,
-                            decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20)),
-                                gradient: LinearGradient(
-                                    colors: [Colors.blue, Colors.purple])),
-                            child: Row(
-                              children: [
-                                Container(
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Column(
-                                      children: [
-                                        Container(
-                                          child: Image.asset(
-                                            "assets/msi/imageAirForces.png",
-                                            width: 30,
-                                            fit: BoxFit.cover,
+                            child: Container(
+                              height: 160,
+                              width: 340,
+                              decoration: BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(20)),
+                                  gradient: LinearGradient(
+                                      colors: [Colors.blue, Colors.purple])),
+                              child: Row(
+                                children: [
+                                  Container(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Column(
+                                        children: [
+                                          Container(
+                                            child: Image.asset(
+                                              "assets/msi/imageAirForces.png",
+                                              width: 30,
+                                              fit: BoxFit.cover,
+                                            ),
                                           ),
-                                        ),
-                                        Container(
-                                            child: Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Text(
-                                            "Brandon Baptisto",
-                                            style: TextStyle(
-                                                fontSize: 15,
-                                                color: Colors.white),
-                                          ),
-                                        )),
-                                        Container(
-                                            child: Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Text("Goalk expar"),
-                                        )),
-                                        Container(
-                                            child: Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Text(
-                                            "19",
-                                            style: TextStyle(
-                                                fontSize: 20,
-                                                color: Colors.white),
-                                          ),
-                                        )),
-                                      ],
+                                          Container(
+                                              child: Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Text(
+                                              "Brandon Baptisto",
+                                              style: TextStyle(
+                                                  fontSize: 15,
+                                                  color: Colors.white),
+                                            ),
+                                          )),
+                                          Container(
+                                              child: Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Text(
+                                              "Goalk expar",
+                                              style: TextStyle(
+                                                  fontSize: 8,
+                                                  color: Colors.white),
+                                            ),
+                                          )),
+                                          Container(
+                                              child: Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Text(
+                                              "19",
+                                              style: TextStyle(
+                                                  fontSize: 20,
+                                                  color: Colors.white),
+                                            ),
+                                          )),
+                                        ],
+                                      ),
                                     ),
                                   ),
-                                ),
-                                Align(
-                                  alignment: Alignment.bottomRight,
-                                  child: Container(
-                                    child: Image.asset(
-                                      "assets/msi/Human1.png",
-                                      height: 100,
+                                  Align(
+                                    alignment: Alignment.bottomRight,
+                                    child: Container(
+                                      child: Image.asset(
+                                        "assets/msi/Human1.png",
+                                        height: 100,
+                                      ),
                                     ),
-                                  ),
-                                )
-                              ],
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -152,7 +153,12 @@ class _mainmsiState extends State<mainmsi> {
                                         Container(
                                             child: Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Text("Right Back"),
+                                          child: Text(
+                                            "Right Back",
+                                            style: TextStyle(
+                                                fontSize: 8,
+                                                color: Colors.white),
+                                          ),
                                         )),
                                         Container(
                                             child: Padding(
@@ -221,7 +227,12 @@ class _mainmsiState extends State<mainmsi> {
                                         Container(
                                             child: Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Text("Goalk expar"),
+                                          child: Text(
+                                            "Goalk expar",
+                                            style: TextStyle(
+                                                fontSize: 8,
+                                                color: Colors.white),
+                                          ),
                                         )),
                                         Container(
                                             child: Padding(
@@ -290,7 +301,12 @@ class _mainmsiState extends State<mainmsi> {
                                         Container(
                                             child: Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Text("Goalk expar"),
+                                          child: Text(
+                                            "Goalk expar",
+                                            style: TextStyle(
+                                                fontSize: 8,
+                                                color: Colors.white),
+                                          ),
                                         )),
                                         Container(
                                             child: Padding(

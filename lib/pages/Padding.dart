@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/dev/homepage.dart';
+import 'package:flutter_application_3/main.dart';
 
 class Paddingpage1 extends StatelessWidget {
   @override
@@ -39,10 +41,16 @@ class Paddingpage1 extends StatelessWidget {
                   ),
                 ],
               ),
-              Container(
-                width: 500,
-                height: 250,
-                child: Image.asset('assets/images/01.png'),
+              TextButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomePage3()));
+                },
+                child: Container(
+                  width: 500,
+                  height: 250,
+                  child: Image.asset('assets/images/01.png'),
+                ),
               ),
               SizedBox(
                 height: 70.0,

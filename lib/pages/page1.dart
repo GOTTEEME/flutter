@@ -2,7 +2,11 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/components/breaking_news_card.dart';
 import 'package:flutter_application_3/components/news_list_tile.dart';
+import 'package:flutter_application_3/components/pageSetting.dart';
+
 import 'package:flutter_application_3/models/news_model.dart';
+import 'package:flutter_application_3/pages/Padding.dart';
+import 'package:flutter_application_3/pages/page2.dart';
 
 class SliderScreen extends StatefulWidget {
   const SliderScreen({super.key});
@@ -56,15 +60,29 @@ class _SliderScreenState extends State<SliderScreen> {
         centerTitle: true,
         title: Text(
           "LiveScone",
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(
+            color: Colors.white,
+          ),
         ),
         actions: [
-          IconButton(
-              onPressed: () {},
+          ShaderMask(
+            blendMode: BlendMode.srcATop,
+            shaderCallback: (bounds) => LinearGradient(colors: [
+              Color.fromARGB(255, 4, 84, 255),
+              Color.fromARGB(255, 219, 14, 255)
+            ], begin: Alignment.centerLeft, end: Alignment.centerRight)
+                .createShader(bounds),
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => setting()));
+              },
               icon: Icon(
-                Icons.notifications_outlined,
+                Icons.settings,
                 color: Colors.white,
-              ))
+              ),
+            ),
+          ),
         ],
       ),
       body: Column(children: [
@@ -95,10 +113,37 @@ class _SliderScreenState extends State<SliderScreen> {
                   SizedBox(
                     height: 0.0,
                   ),
-                  const Text(
-                    "See all",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.orange),
+                  ShaderMask(
+                    blendMode: BlendMode.srcATop,
+                    shaderCallback: (bounds) => LinearGradient(colors: [
+                      Color.fromARGB(255, 4, 84, 255),
+                      Color.fromARGB(255, 219, 14, 255)
+                    ], begin: Alignment.centerLeft, end: Alignment.centerRight)
+                        .createShader(bounds),
+                    child: ShaderMask(
+                        blendMode: BlendMode.srcATop,
+                        shaderCallback: (bounds) => LinearGradient(
+                                    colors: [
+                                  Color.fromARGB(255, 4, 84, 255),
+                                  Color.fromARGB(255, 219, 14, 255)
+                                ],
+                                    begin: Alignment.centerLeft,
+                                    end: Alignment.centerRight)
+                                .createShader(bounds),
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Paddingpage1(),
+                              ),
+                            );
+                          },
+                          child: Text(
+                            'see all',
+                            style: TextStyle(fontSize: 15, color: Colors.white),
+                          ),
+                        )),
                   ),
                 ],
               ),
@@ -203,10 +248,41 @@ class _SliderScreenState extends State<SliderScreen> {
                       SizedBox(
                         height: 50.0,
                       ),
-                      const Text(
-                        "See all",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.orange),
+                      ShaderMask(
+                        blendMode: BlendMode.srcATop,
+                        shaderCallback: (bounds) => LinearGradient(
+                                colors: [
+                              Color.fromARGB(255, 4, 84, 255),
+                              Color.fromARGB(255, 219, 14, 255)
+                            ],
+                                begin: Alignment.centerLeft,
+                                end: Alignment.centerRight)
+                            .createShader(bounds),
+                        child: ShaderMask(
+                            blendMode: BlendMode.srcATop,
+                            shaderCallback: (bounds) => LinearGradient(
+                                        colors: [
+                                      Color.fromARGB(255, 4, 84, 255),
+                                      Color.fromARGB(255, 219, 14, 255)
+                                    ],
+                                        begin: Alignment.centerLeft,
+                                        end: Alignment.centerRight)
+                                    .createShader(bounds),
+                            child: TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => HomePage1(),
+                                  ),
+                                );
+                              },
+                              child: Text(
+                                'see all',
+                                style: TextStyle(
+                                    fontSize: 15, color: Colors.white),
+                              ),
+                            )),
                       ),
                     ],
                   ),

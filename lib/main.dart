@@ -1,5 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/components/Club.dart';
+import 'package:flutter_application_3/components/pageSetting.dart';
+import 'package:flutter_application_3/dev/Standingpage.dart';
+import 'package:flutter_application_3/dev/homepage.dart';
+
 import 'package:flutter_application_3/pages/Padding.dart';
 import 'package:flutter_application_3/pages/page1.dart';
 import 'package:flutter_application_3/pages/page2.dart';
@@ -32,10 +37,9 @@ class _HomePageState extends State<HomePage> {
   int currenIndex = 0;
   List widgetOptions = [
     SliderScreen(),
+    Standingpage(),
+    Club(),
     mainmsi(),
-    HomePage1(),
-    page4(),
-    Paddingpage1(),
   ];
 
   @override
@@ -56,12 +60,8 @@ class _HomePageState extends State<HomePage> {
             backgroundColor: Color.fromRGBO(18, 56, 86, 1),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.bookmark),
-            label: 'bookmark',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
+            icon: Icon(Icons.favorite_border),
+            label: 'Club',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
