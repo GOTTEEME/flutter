@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_application_3/components/BURIRAM.dart';
 
 class Club extends StatefulWidget {
   const Club({Key? key}) : super(key: key);
@@ -31,8 +32,8 @@ class _ClubState extends State<Club> {
               padding: const EdgeInsets.all(8.0),
               child: TextButton(
                 onPressed: () {
-                  // Navigator.push(context,
-                  //     MaterialPageRoute(builder: (context) => Page2()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => BURIRAM()));
                 },
                 child: Image.asset("assets/image/imageClub2.png"),
               ),
