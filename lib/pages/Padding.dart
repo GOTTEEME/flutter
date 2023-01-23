@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/dev/finalpage.dart';
 import 'package:flutter_application_3/dev/homepage.dart';
 import 'package:flutter_application_3/main.dart';
 
@@ -44,7 +45,7 @@ class Paddingpage1 extends StatelessWidget {
               TextButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomePage3()));
+                      MaterialPageRoute(builder: (context) => FinalPage()));
                 },
                 child: Container(
                   width: 500,
