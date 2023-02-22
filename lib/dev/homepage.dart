@@ -13,10 +13,10 @@ class _HomePageState extends State<HomePage3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(18, 56, 86, 1),
+      backgroundColor: Color.fromARGB(255, 14, 12, 32),
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Color.fromRGBO(18, 56, 86, 1),
+        backgroundColor: Color.fromARGB(255, 14, 12, 32),
         centerTitle: true,
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),

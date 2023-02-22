@@ -34,20 +34,20 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(18, 56, 86, 1),
+      backgroundColor: Color.fromARGB(255, 14, 12, 32),
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Color.fromRGBO(18, 56, 86, 1),
+        backgroundColor: Color.fromARGB(255, 14, 12, 32),
         centerTitle: true,
+        title: Text(
+          "BURIRAM UNITED",
+          style: TextStyle(color: Colors.white),
+        ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
           color: Colors.white,
           iconSize: 30,
           onPressed: () => Navigator.of(context).pop(),
-        ),
-        title: Text(
-          "BURIRAM UNITED",
-          style: TextStyle(color: Colors.white),
         ),
       ),
       body: Column(
@@ -154,7 +154,7 @@ class Home extends StatelessWidget {
                   return Column(
                     children: [
                       Card(
-                        color: Color.fromARGB(255, 21, 66, 101),
+                        color: Color.fromARGB(255, 14, 12, 32),
                         child: ListTile(
                           title: Align(
                               alignment: Alignment.center,

@@ -14,7 +14,7 @@ class _mainmsiState extends State<mainmsi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromRGBO(18, 56, 86, 1),
+        backgroundColor: Color.fromARGB(255, 14, 12, 32),
         appBar: AppBar(
           elevation: 0.0,
           backgroundColor: Colors.transparent,

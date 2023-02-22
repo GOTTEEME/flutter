@@ -14,10 +14,10 @@ class _ClubState extends State<Club> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(18, 56, 86, 1),
+      backgroundColor: Color.fromARGB(255, 14, 12, 32),
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Color.fromRGBO(18, 56, 86, 1),
+        backgroundColor: Color.fromARGB(255, 14, 12, 32),
         centerTitle: true,
         title: Text(
           "Club",
@@ -32,8 +32,12 @@ class _ClubState extends State<Club> {
               padding: const EdgeInsets.all(8.0),
               child: TextButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => BURIRAM()));
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BURIRAM(),
+                    ),
+                  );
                 },
                 child: Image.asset("assets/image/imageClub2.png"),
               ),

@@ -22,19 +22,19 @@ class NewsData {
         "Isabella Simonetti",
         "After peaking in June, they are back where they were in March, offering some relief to consumers and policymakers amid inflation worries.",
         "2022-08-11",
-        "https://scontent.fbkk13-1.fna.fbcdn.net/v/t1.15752-9/322493830_693914695550385_7875111787154391942_n.png?stp=dst-png_s320x320&_nc_cat=108&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeGMu9RIDQlokAPG34dXQLveVUS5eDaNHIhVRLl4No0ciFwUQSTg47rgkhyEAufED5rmsBN9FhCkhPClrZL_UzRj&_nc_ohc=Hg6IfRZ2_ggAX8ZAeCu&_nc_ht=scontent.fbkk13-1.fna&oh=03_AdSZcPt3hgwnb3tEua-to8RtfHANkkVn2lB3noNVC5jKMg&oe=63EB1FAB"),
+        "https://scontent.fnak2-1.fna.fbcdn.net/v/t1.15752-9/322493830_693914695550385_7875111787154391942_n.png?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGMu9RIDQlokAPG34dXQLveVUS5eDaNHIhVRLl4No0ciFwUQSTg47rgkhyEAufED5rmsBN9FhCkhPClrZL_UzRj&_nc_ohc=Nks9f2iuXXAAX_PaFyD&tn=ZL-oPnKaGlC-OBg-&_nc_ht=scontent.fnak2-1.fna&oh=03_AdS1p-PmLM0tfp2rxAcSqPLSz0KNKyt8qYm4U_t4gQf_jg&oe=64190BEB"),
     NewsData(
         "BYD Is Taking Electric Vehicles To The World!",
         "Remeredzai Joseph Kuhudzai",
         "There was quite a bit of drama on several forums following reports in various media platforms around the world that BYD has overtaken Telsa to become the top-selling EV company. In fact, there was quite a bit of an uproar from some circles that felt that it w…",
         "2022-08-11",
-        "https://scontent.fbkk13-1.fna.fbcdn.net/v/t1.15752-9/322493830_693914695550385_7875111787154391942_n.png?stp=dst-png_s320x320&_nc_cat=108&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeGMu9RIDQlokAPG34dXQLveVUS5eDaNHIhVRLl4No0ciFwUQSTg47rgkhyEAufED5rmsBN9FhCkhPClrZL_UzRj&_nc_ohc=Hg6IfRZ2_ggAX8ZAeCu&_nc_ht=scontent.fbkk13-1.fna&oh=03_AdSZcPt3hgwnb3tEua-to8RtfHANkkVn2lB3noNVC5jKMg&oe=63EB1FAB"),
+        "https://scontent.fnak2-1.fna.fbcdn.net/v/t1.15752-9/322493830_693914695550385_7875111787154391942_n.png?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGMu9RIDQlokAPG34dXQLveVUS5eDaNHIhVRLl4No0ciFwUQSTg47rgkhyEAufED5rmsBN9FhCkhPClrZL_UzRj&_nc_ohc=Nks9f2iuXXAAX_PaFyD&tn=ZL-oPnKaGlC-OBg-&_nc_ht=scontent.fnak2-1.fna&oh=03_AdS1p-PmLM0tfp2rxAcSqPLSz0KNKyt8qYm4U_t4gQf_jg&oe=64190BEB"),
     NewsData(
         "Unexpected storms diverted 100 American Airlines flights and sparked hundreds of cancellations",
         "Marnie Hunter",
         "Severe thunderstorms around Dallas-Fort Worth International Airport on Wednesday caused 100 American Airlines flight diversions and led to hundreds of cancellations that extended into Thursday's schedule.",
         "2022-08-11",
-        "https://scontent.fbkk13-1.fna.fbcdn.net/v/t1.15752-9/322493830_693914695550385_7875111787154391942_n.png?stp=dst-png_s320x320&_nc_cat=108&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeGMu9RIDQlokAPG34dXQLveVUS5eDaNHIhVRLl4No0ciFwUQSTg47rgkhyEAufED5rmsBN9FhCkhPClrZL_UzRj&_nc_ohc=Hg6IfRZ2_ggAX8ZAeCu&_nc_ht=scontent.fbkk13-1.fna&oh=03_AdSZcPt3hgwnb3tEua-to8RtfHANkkVn2lB3noNVC5jKMg&oe=63EB1FAB"),
+        "https://scontent.fnak2-1.fna.fbcdn.net/v/t1.15752-9/322493830_693914695550385_7875111787154391942_n.png?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGMu9RIDQlokAPG34dXQLveVUS5eDaNHIhVRLl4No0ciFwUQSTg47rgkhyEAufED5rmsBN9FhCkhPClrZL_UzRj&_nc_ohc=Nks9f2iuXXAAX_PaFyD&tn=ZL-oPnKaGlC-OBg-&_nc_ht=scontent.fnak2-1.fna&oh=03_AdS1p-PmLM0tfp2rxAcSqPLSz0KNKyt8qYm4U_t4gQf_jg&oe=64190BEB"),
   ];
 
   static List<NewsData> recentNewsData = [

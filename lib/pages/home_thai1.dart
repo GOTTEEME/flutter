@@ -1,32 +1,89 @@
+import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/components/Club.dart';
 import 'package:flutter_application_3/components/breaking_news_card.dart';
 import 'package:flutter_application_3/components/news_list_tile.dart';
 import 'package:flutter_application_3/components/pageSetting.dart';
 import 'package:flutter_application_3/dev/Standingpage.dart';
-
 import 'package:flutter_application_3/models/news_model.dart';
 import 'package:flutter_application_3/pages/Padding.dart';
 import 'package:flutter_application_3/pages/page2.dart';
 import 'package:flutter_application_3/pages/page3%20.dart';
 
-class SliderScreen extends StatefulWidget {
-  const SliderScreen({super.key});
+import 'package:google_nav_bar/google_nav_bar.dart';
+
+class HomeThai extends StatefulWidget {
+  const HomeThai({Key? key}) : super(key: key);
 
   @override
-  State<SliderScreen> createState() => _SliderScreenState();
+  State<HomeThai> createState() => _HomeThaiState();
 }
 
-class _SliderScreenState extends State<SliderScreen> {
+class _HomeThaiState extends State<HomeThai> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color.fromARGB(255, 14, 12, 32),
+      resizeToAvoidBottomInset: false,
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 14, 12, 32),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.settings,
+            ),
+            onPressed: () {},
+          )
+        ],
+        title: const Text('Thai Leage'),
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
+            color: Color.fromARGB(255, 14, 12, 32),
+            child: Column(
+              children: [
+                HomeThai(),
+                Standingpage(),
+                Club(),
+                mainmsi(),
+              ],
+            ),
+          ),
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home, color: Color.fromARGB(255, 1, 253, 253)),
+            label: 'Home',
+            backgroundColor: Color.fromARGB(255, 14, 12, 32),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat, color: Color.fromARGB(255, 1, 253, 253)),
+            label: 'Business',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite, color: Color.fromARGB(255, 1, 253, 253)),
+            label: 'School',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_circle,
+                color: Color.fromARGB(255, 1, 253, 253)),
+            label: 'Profile',
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class HomeThaiState extends State<HomeThai> {
   final CarouselController carouselController = CarouselController();
-  int currenIndex = 0;
-  List widgetOptions = [
-    SliderScreen(),
-    Standingpage(),
-    Club(),
-    mainmsi(),
-  ];
   final List<String> home = <String>[
     'บุรีรัมย์ ยูในเต็ด',
     'บุรีรัมย์ ยูในเต็ด',
@@ -58,6 +115,8 @@ class _SliderScreenState extends State<SliderScreen> {
     '20 OCT',
   ];
   final List<int> colorCodes = <int>[600, 500, 100];
+
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -104,6 +163,15 @@ class _SliderScreenState extends State<SliderScreen> {
               enableInfiniteScroll: false,
               enlargeCenterPage: true,
             )),
+        // CarouselSlider.builder(
+        // itemCount: NewsData.breakingNewsData.length,
+        // itemBuilder: (context, index, id) =>
+        //     BreakingNewsCard(NewsData.breakingNewsData[index]),
+        // options: CarouselOptions(
+        //   aspectRatio: 36 / 15,
+        //   enableInfiniteScroll: false,
+        //   enlargeCenterPage: true,
+        // )),
         Container(
           padding: const EdgeInsets.all(12),
           child: Column(
@@ -144,7 +212,8 @@ class _SliderScreenState extends State<SliderScreen> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Paddingpage1(),
+                                builder: (context) =>
+                                    Paddingpage1(), //Paddingpage1(),
                               ),
                             );
                           },
@@ -303,6 +372,11 @@ class _SliderScreenState extends State<SliderScreen> {
                         .map((e) => NewsListTile(e))
                         .toList(),
                   ),
+                  // Column(
+                  //   children: NewsData.recentNewsData
+                  //       .map((e) => NewsListTile(e))
+                  //       .toList(),
+                  // ),
                   SizedBox(
                     height: 10.0,
                   ),
@@ -312,84 +386,6 @@ class _SliderScreenState extends State<SliderScreen> {
           ),
         )
       ]),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   items: const [
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.home, color: Color.fromARGB(255, 1, 253, 253)),
-      //       label: 'Home',
-      //       backgroundColor: Color.fromARGB(255, 14, 12, 32),
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.chat, color: Color.fromARGB(255, 1, 253, 253)),
-      //       label: 'Business',
-      //       backgroundColor: Color.fromARGB(255, 14, 12, 32),
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.favorite, color: Color.fromARGB(255, 1, 253, 253)),
-      //       label: 'School',
-      //       backgroundColor: Color.fromARGB(255, 14, 12, 32),
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.account_circle,
-      //           color: Color.fromARGB(255, 1, 253, 253)),
-      //       label: 'Profile',
-      //       backgroundColor: Color.fromARGB(255, 14, 12, 32),
-      //     ),
-      //   ],
-      //   currentIndex: 1,
-      //   onTap: (value) => setState(
-      //     () => currenIndex = value,
-      //   ),
-      // ),
     );
   }
 }
-
-// class _SliderScreenState extends State<SliderScreen> {
-//   int currenIndex = 0;
-//   List widgetOptions = [
-//     SliderScreen(),
-//     Standingpage(),
-//     Club(),
-//     mainmsi(),
-//   ];
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Center(
-//         child: widgetOptions[currenIndex],
-//       ),
-//       bottomNavigationBar: BottomNavigationBar(
-//         items: const [
-//           BottomNavigationBarItem(
-//             icon: Icon(Icons.home, color: Color.fromARGB(255, 1, 253, 253)),
-//             label: 'Home',
-//             backgroundColor: Color.fromARGB(255, 14, 12, 32),
-//           ),
-//           BottomNavigationBarItem(
-//             icon: Icon(Icons.chat, color: Color.fromARGB(255, 1, 253, 253)),
-//             label: 'Business',
-//             backgroundColor: Color.fromARGB(255, 14, 12, 32),
-//           ),
-//           BottomNavigationBarItem(
-//             icon: Icon(Icons.favorite, color: Color.fromARGB(255, 1, 253, 253)),
-//             label: 'School',
-//             backgroundColor: Color.fromARGB(255, 14, 12, 32),
-//           ),
-//           BottomNavigationBarItem(
-//             icon: Icon(Icons.account_circle,
-//                 color: Color.fromARGB(255, 1, 253, 253)),
-//             label: 'Profile',
-//             backgroundColor: Color.fromARGB(255, 14, 12, 32),
-//           ),
-//         ],
-//         currentIndex: 1,
-//         onTap: (value) => setState(
-//           () => currenIndex = value,
-//         ),
-//       ),
-//     );
-//   }
-// }
-
